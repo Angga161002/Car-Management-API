@@ -1,0 +1,68 @@
+const adminService = require("../../../services/adminService");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
+const secretKey = "secret";
+
+const createAdmin = async (req, res) => {
+    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+    const admin = {
+        email: req.body.email,
+        password: hashedPassword,
+    };
+    try {
+        await adminService.create(admin);
+        res.status(201).json({
+            message: "Admin Created",
+            data: admin,
+        });
+    } catch (error) {
+        res.status(400).send(error);
+    }
+};
+
+const login = async (req, res) => {
+    const email = req.body.email;
+    const password = req.body.password;
+
+    const user = await adminService.findByEmail(email);
+    if (!user) {
+        return res.status(404).send({
+            message: "Email salah",
+        });
+    }
+
+    const status = await bcrypt.compare(password, user.password);
+    if (!status) {
+        return res.status(404).send({
+            message: "Password salah",
+        });
+    }
+
+    const token = jwt.sign({
+        user,
+        role: "Admin"
+    }, secretKey);
+
+    res.json({
+        user,
+        token
+    });
+};
+
+const listUsers = async (req, res) => {
+    try {
+        const user = await adminService.findAll();
+        res.status(200).json({
+            status: "OK",
+            user,
+        });
+    } catch (error) {
+        res.status(400).send(error);
+    }
+};
+
+module.exports = {
+    login,
+    createAdmin,
+    listUsers,
+};
