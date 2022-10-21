@@ -23,7 +23,7 @@ npm i
 
 Kemudian, buat database yang sesuai dengan apa yang ada dalam file `/config/config.json`.
 ```
-sequelize db:create
+npx sequelize-cli db:create
 ```
 
 Jika database sudah dibuat maka selanjutnya adalah melakukan migrasi seluruh model yang ada di folder `/app/models` ke dalam database.
