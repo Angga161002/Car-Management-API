@@ -41,7 +41,7 @@ Jika sudah, maka masukkan kembali folder `migrations` dan `seeders` kedalam fold
 
 Maka akan tersedia data user sebagai super admin yang digunakan untuk login dan mengakses seluruh endpoint.
 ```
-email: angga@gmail.com
+email: spadmin@gmail.com
 pass: qwerty
 ```
 
@@ -53,6 +53,6 @@ npm run start
 
 Untuk melihat seluruh endpoint yang tersedia dapat mengimport API Documentatio dari file berikut
 ```
-`/postman/Back End.postman_collection.json`
+`/postman/Rest Api Back End Cl6.postman_collection.json`
 
 ```

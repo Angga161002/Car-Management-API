@@ -1,0 +1,522 @@
+{
+	"info": {
+		"_postman_id": "8fe431ff-3c3f-4cc2-95d4-000ef858fbdc",
+		"name": "Rest Api Back End Cl6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23579794"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Login Superadmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"spadmin@gmail.com\",\r\n    \"password\": \"qwerty\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/superadmin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"superadmin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImFuZ2dhQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFZOQVVKQk01WkFhVVJOZjA3NzBLNGV5VVlaTXVwVzFvOGhIR3NKTHdqZHNvZE45N3hISHphIiwiY3JlYXRlZEF0IjoiMjAyMi0xMC0yMVQxMDo0ODo1MS41NTlaIiwidXBkYXRlZEF0IjoiMjAyMi0xMC0yMVQxMDo0ODo1MS41NTlaIn0sInJvbGUiOiJTdXBlcmFkbWluIiwiaWF0IjoxNjY2MzQ5NjkyfQ.-zass-zfmW0fyMxlj9YKzgqaKbunre4ys0_hlO_q6Dw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"admin@gmail.com\",\r\n    \"password\": \"aqwertyu\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/superadmin/admin/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"superadmin",
+								"admin",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"admin@gmail.com\",\r\n    \"password\": \"aqwertyu\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Member",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"member@gmail.com\",\r\n    \"password\": \"aqwertyu\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/member/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"member",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Member",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"member@gmail.com\",\r\n    \"password\": \"aqwertyu\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/member/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"member",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Who Am I",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6Ik1sYmJAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkeVExYjNaYkVMMUZRZkNMMWcvVGU4LjdCZi9KN0lNbW5Zdm1SeWQ5NjJWaVVkTXcwTXhZeW0iLCJjcmVhdGVkQXQiOiIyMDIyLTEwLTIxVDEwOjU3OjIxLjUyMloiLCJ1cGRhdGVkQXQiOiIyMDIyLTEwLTIxVDEwOjU3OjIxLjUyMloifSwiaWF0IjoxNjY2MzQ5ODY5fQ.biW7hg_JOWY3-tkaop-C4UMx0Ck1hbgW7OnWDrzcNkY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Superadmin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImFuZ2dhQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJDJDOFdCTXFLWkthSDEzY3dQc3AvV3Vib3BpYzhCN0ViaVB0WUtDdHROVEo2SFRzSUU3WWFlIiwiY3JlYXRlZEF0IjoiMjAyMi0xMC0xOVQwOTo1ODo1NC4wMzdaIiwidXBkYXRlZEF0IjoiMjAyMi0xMC0xOVQwOTo1ODo1NC4wMzdaIn0sInJvbGUiOiJTdXBlcmFkbWluIiwiaWF0IjoxNjY2MzQ0MTM5fQ.RihPRstnyTeO6vu0nEbFz2A5JFbH3e-veoilSaBw-OE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/superadmin/listSuperAdmin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"superadmin",
+								"listSuperAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Admin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImFuZ2dhQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJDJDOFdCTXFLWkthSDEzY3dQc3AvV3Vib3BpYzhCN0ViaVB0WUtDdHROVEo2SFRzSUU3WWFlIiwiY3JlYXRlZEF0IjoiMjAyMi0xMC0xOVQwOTo1ODo1NC4wMzdaIiwidXBkYXRlZEF0IjoiMjAyMi0xMC0xOVQwOTo1ODo1NC4wMzdaIn0sInJvbGUiOiJTdXBlcmFkbWluIiwiaWF0IjoxNjY2MzQ0MTM5fQ.RihPRstnyTeO6vu0nEbFz2A5JFbH3e-veoilSaBw-OE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/admin/listAdmin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"admin",
+								"listAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Member",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImFuZ2dhQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFZOQVVKQk01WkFhVVJOZjA3NzBLNGV5VVlaTXVwVzFvOGhIR3NKTHdqZHNvZE45N3hISHphIiwiY3JlYXRlZEF0IjoiMjAyMi0xMC0yMVQxMDo0ODo1MS41NTlaIiwidXBkYXRlZEF0IjoiMjAyMi0xMC0yMVQxMDo0ODo1MS41NTlaIn0sInJvbGUiOiJTdXBlcmFkbWluIiwiaWF0IjoxNjY2MzQ5NjkyfQ.-zass-zfmW0fyMxlj9YKzgqaKbunre4ys0_hlO_q6Dw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/member/listMember",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"member",
+								"listMember"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cars",
+			"item": [
+				{
+					"name": "Add Car",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6InN0dW1ibGVAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkek1zdHhrT0c0c2MuTjNWTXdteGV0LkJkSXk4UE5OOGRvL0N5U29rLnBCTDdMSk5oL3JydTIiLCJjcmVhdGVkQXQiOiIyMDIyLTEwLTIxVDEwOjU1OjQzLjYzMVoiLCJ1cGRhdGVkQXQiOiIyMDIyLTEwLTIxVDEwOjU1OjQzLjY0NFoifSwicm9sZSI6IkFkbWluIiwiaWF0IjoxNjY2MzQ5NzgwfQ.6TRVIZmE6vaZp0zkDTkR0BAzh-eCuyis8-K2Aq9Z8R4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Avanza\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/cars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Car",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/cars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Car By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/cars/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cars",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Car",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6InN0dW1ibGVAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkek1zdHhrT0c0c2MuTjNWTXdteGV0LkJkSXk4UE5OOGRvL0N5U29rLnBCTDdMSk5oL3JydTIiLCJjcmVhdGVkQXQiOiIyMDIyLTEwLTIxVDEwOjU1OjQzLjYzMVoiLCJ1cGRhdGVkQXQiOiIyMDIyLTEwLTIxVDEwOjU1OjQzLjY0NFoifSwicm9sZSI6IkFkbWluIiwiaWF0IjoxNjY2MzQ5NzgwfQ.6TRVIZmE6vaZp0zkDTkR0BAzh-eCuyis8-K2Aq9Z8R4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Xenia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/cars/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cars",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Car",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6Im5hbmRhQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFl0YVlJTFRGOWllZnVLcTBTRlBOZU9pc2JBUWlBVHYwSjZLMVY3S244LkhrcUV3aHlab3dHIiwiY3JlYXRlZEF0IjoiMjAyMi0xMC0xOVQxMDoxOTo1NC41MjFaIiwidXBkYXRlZEF0IjoiMjAyMi0xMC0xOVQxMDoxOTo1NC41MjZaIn0sInJvbGUiOiJBZG1pbiIsImlhdCI6MTY2NjE3NTA0Mn0.n9-RmPC5b55xDbt5jiCL-o-nevyucoD2_As0N_1ija8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Avanza\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/cars/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cars",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
